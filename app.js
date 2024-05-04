@@ -1,13 +1,13 @@
-import expresss from 'express'
+import express from 'express'
 import dotenv  from "dotenv"
 import router from "./routers/api.js"
 
 dotenv.config();
 
-const app = expresss()
+const app = express()
 
-app.use(expresss.urlencoded({extended: false}))
-app.use(expresss.json())
+app.use(express.urlencoded({extended: false}))
+app.use(express.json())
 
 app.use(router)
 
